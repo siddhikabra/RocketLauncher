@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD622CC0-4209-4A70-B273-D219126CCD59}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RocketLaunch</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="RocketLaunch\Controllers\SatellitesController.cs" />
+    <Compile Include="RocketLaunch\Models\Helper.cs" />
+    <Compile Include="RocketLaunch\Controllers\RocketsController.cs" />
+    <Compile Include="RocketLaunch\DAL\RocketLauncherDAL.cs" />
+    <Compile Include="RocketLaunch\MvcApplication.cs" />
+    <Compile Include="RocketLaunch\Models\Rocket.cs" />
+    <Compile Include="RocketLaunch\Models\Satellite.cs" />
+    <Compile Include="RocketLaunch\Models\SatelliteCategory.cs" />
+    <Compile Include="RocketLaunch\ViewModels\SatellitesViewModel.cs" />
+    <Compile Include="RocketLaunch\ViewModels\RocketsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="RocketLaunch\Views\Rockets\CreateRocket.cshtml" />
+    <None Include="RocketLaunch\Views\Rockets\ModifyRocket.cshtml" />
+    <None Include="RocketLaunch\Views\Rockets\RocketsView.cshtml" />
+    <None Include="RocketLaunch\Views\Satellites\ModifySatellite.cshtml" />
+    <None Include="RocketLaunch\Views\Satellites\SatellitesView.cshtml" />
+    <None Include="RocketLaunch\Views\Shared\Error.cshtml" />
+    <None Include="RocketLaunch\Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery-ui.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="RocketLaunch\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="RocketLaunch\Content\themes\base\minified\jquery.ui.theme.min.css" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+﻿@using RocketLaunch.Models
+@model Rocket
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width" />
+      <title>Update Rocket</title>
+    </head>
+    <body>
+      <div>
+         <form action="/Rockets/UpdateRocket" method="post">
+            Name:<input type="text" id="TxtName" name="Name" value="@Model.Name" disabled/> <br />
+            Destination: <input type="text" id="TxtDestination" name="Destination" value="@Model.Destination" /><br />
+            Satellite: <input type="text" id="TxtSatellite" name="Satellite" value="@Model.Satellites" /><br />
+            <input type="submit" name="BtnSave" value="Update Rocket" />
+         </form>
+      </div>
+    </body>
+</html>

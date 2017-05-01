@@ -1,0 +1,35 @@
+﻿@using RocketLaunch.ViewModels
+@model RocketsViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rockets</title>
+</head>
+<body>
+  <a  href="/Rockets/AddNew">Add New Rocket</a>
+    <div>
+       <table border="1">
+           <tr>
+               <th>Rocket Name</th>
+               <th>Destination</th>
+               <th>Satellites</th>
+           </tr>
+           @foreach (RocketLaunch.Models.Rocket item in Model.Rockets)
+           {
+               <tr>
+                   <td>@item.Name</td>
+                   <td>@item.Destination</td>
+                   <td>@item.Satellites</td>
+                   <td><a  href="@Url.Action("Update", "Rockets")?rocketName=@item.Name">Update</a> </td>
+               </tr>
+           }
+       </table>
+    </div>
+    <a  href="/Satellites/SatellitesList">See All Satellites</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Rocket</title>
+</head>
+<body>
+    <div>
+        <form action="/Rockets/SaveRocket" method="post">
+            Name:
+            <input type="text" id="txtName" name="Name" value="" /><br />
+            Destination:
+            <input type="text" id="TxtDestination" name="Destination" value="" /><br />
+            Satellite:
+            <input type="text" id="txtSatellites" name="Satellites" value="" /><br />
+            Satellite Category:
+            <select name="category" id="category" >
+                <option>weather</option>
+                <option>maps</option>
+                <option>surviellance</option>
+
+            </select>
+            </br>
+            <input type="submit" name="BtnSave" value="Save Rocket" />
+        </form>
+    </div>
+</body>
+</html>
